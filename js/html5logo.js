@@ -220,17 +220,20 @@ function onDocumentMouseDown( event ) {
 	
 	lastX = event.clientX - windowHalfX;
 	lastY = event.clientY - windowHalfY;
+	return false;
 }
 
 function onDocumentMouseMove( event )
 {
 	if(!mouseDown)return;
+	event.preventDefault();
 	mouseX = event.clientX - windowHalfX;
 	spin += (mouseX - lastX) * spinspeed;
 	mouseY = event.clientY - windowHalfY;
 	targetRotationY += (mouseY - lastY) * spinspeed;
 	lastX = mouseX;
 	lastY = mouseY;
+	return false;
 }
 
 function onDocumentMouseUp( event )

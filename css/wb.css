@@ -276,6 +276,12 @@ body     { pointer-events: none; }
 
 #canvas {
     background-color: #ddd;
+	cursor: move;
+}
+
+#opensource {
+	width: 200px;
+	height: 200px;
 }
 
 .center {
