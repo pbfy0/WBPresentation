@@ -14,6 +14,7 @@
 window.addEventListener('load', onloadHandler, false);
 var ambientspeed = 1.8;
 var spinspeed = 0.02;
+var interval = 0;
 /**
  * Window onload handler
  */
@@ -189,7 +190,12 @@ function onloadHandler()
    
    // start demo loop
    k3dmain.paused = true;
-   setInterval(function(){k3dmain.tick()}, 1000/60);
+   canvas.addEventListener('impress:step-enter', function(){
+	interval = setInterval(function(){k3dmain.tick()}, 1000/60);
+   }, false);
+   canvas.addEventListener('impress:step-leave', function(){
+	clearInterval(interval);
+   }, false);
 }
 
 // nifty drag/touch event capture code borrowed from Mr Doob http://mrdoob.com/
