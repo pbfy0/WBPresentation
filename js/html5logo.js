@@ -190,12 +190,8 @@ function onloadHandler()
    
    // start demo loop
    k3dmain.paused = true;
-   canvas.addEventListener('impress:step-enter', function(){
-	interval = setInterval(function(){k3dmain.tick()}, 1000/60);
-   }, false);
-   canvas.addEventListener('impress:step-leave', function(){
-	clearInterval(interval);
-   }, false);
+   interval = setInterval(function(){k3dmain.tick()}, 1000/60);
+
 }
 
 // nifty drag/touch event capture code borrowed from Mr Doob http://mrdoob.com/

@@ -104,6 +104,7 @@ body     { pointer-events: none; }
 /* COMMON STEP STYLES */
 
 .step {
+    text-align: center;
     width: 900px;
     padding: 40px;
 
@@ -276,14 +277,14 @@ body     { pointer-events: none; }
 
 #canvas {
     background-color: #ddd;
-	cursor: move;
+    cursor: pointer;
+}
+
+#canvas:active {
+    cursor: move;
 }
 
 #opensource {
 	width: 200px;
 	height: 200px;
-}
-
-.center {
-	text-align: center;
 }
