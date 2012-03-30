@@ -1,0 +1,221 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Comparison of web browsers</title>
+	<script type="text/javascript" src="js/mathlib.js"></script>
+   	<script type="text/javascript" src="js/k3d.js"></script>
+	<script type="text/javascript" src="js/html5logo.js"></script>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/wb.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+<div id="impress">
+    <div id="browsers" class="step" data-x="-1000" data-y="-1500">
+        <q>My presentation is on <a href="http://en.wikipedia.org/wiki/Web_browsers">web browsers</a></q>
+    </div>
+    <div id="intro" class="step" data-x="0" data-y="-1500">
+        <q>I will be reviewing the three major browsers</q>
+    </div>
+
+    <div id="chrome" class="step" data-x="15" data-y="-1530" data-scale="0.1" data-z="-200">
+	<img src="i/Chrome.svg" style="width: 200px; height: 200px;" alt="Chrome logo" /><br />
+        <q><a href="http://en.wikipedia.org/wiki/Google_Chrome">Google Chrome</a></q>
+    </div>
+
+    <div id="firefox" class="step" data-x="15" data-y="-1530" data-z="-400" data-scale="0.1">
+	<img src="i/Firefox.png" style="width: 200px; height: 200px;" alt="Firefox logo" /><br />
+        <q><a href="http://en.wikipedia.org/wiki/Firefox">Mozilla Firefox</a></q>
+    </div>
+    <div id="IE" class="step" data-x="15" data-y="-1530" data-z="-600" data-scale="0.1">
+	<img src="i/IE.png" style="width: 200px; height: 200px;" alt="IE logo" /><br />
+        <q>and <a href="http://en.wikipedia.org/wiki/Internet_Explorer">Internet Explorer</a></q>
+    </div>
+    <div id="chrome-html5" class="step" data-x="0" data-y="-500" data-scale="2">
+	<canvas id="canvas" width="300" height="300">
+	    <img src="i/HTML5.png" alt="HTML5" />
+	</canvas><br />
+	<q>Google chrome scores the best on <a href="http://en.wikipedia.org/wiki/HTML5">HTML5</a> tests.</q>
+    </div>
+    <div id="chrome-malware" class="step" data-x="1000" data-y="-500" data-rotate-z="-90" data-rotate-y="45">
+	<img src="i/NO.svg" alt="" /><br />
+	<q>It downloads phishing and malware lists, and blocks them</q>
+    </div>
+    <div id="chrome-js-speed" class="step" data-x="0" data-y="1000" data-rotate-z="90">
+	<img src="i/V8.png" alt="" /><br />
+	<q>It also has the fastest javascript engine, V8.</q>
+    </div>
+	<div id="ff-open" class="step" data-x="0" data-y="2000">
+	    <img id="opensource" src="i/Opensource.svg" /><br />
+	Firefox is open source
+	</div>
+	<div id="ff-usage" class="step" data-x="0" data-y="2000" data-z="-100" data-rotate-y="180">
+		<img src="i/Usage.png"><br />
+		Firefox was the most popular browser other than IE.
+	</div>
+	<div id="ff-addon" class="step" data-x="700" data-y="2000" data-rotate-z="-90">
+		<img src="i/Addon.png" /><br />
+		Firefox has the largest collection of addons.
+	</div>
+	<div id="ie-usage" class="step" data-x="700" data-y="2000" data-z="1200">
+	    <img src="i/IE.png" /><br />
+	    IE is the most popular browser
+	</div>
+	<div id="ie-6" class="step" data-x="700" data-y="2000" data-z="1200" data-rotate-y="90">
+	    <img src="i/IE6.png" /><br />
+	    On the other hand, IE6 has many quirks, making it the bane of web designers
+	</div>
+	<div id="ie-9" class="step" data-x="700" data-y="2000" data-z="1200" data-rotate-x="90">
+	    <img src="i/IE.png" /><br />
+	    IE9 is vastly more standards-compliant than its predeccesors
+	</div>
+	<div id="ov" class="step" data-x="0" data-y="-500" data-z="-1000">
+	    To summarize:<br />
+	    Chrome is fast and simple<br />
+	    Firefox is very customizable<br />
+	    IE is popular<br />
+	</div>
+	<div id="overview" class="step" data-x="0" data-y="800" data-scale="4" data-rotate-z="90">
+	    
+	</div>
+</div>
+
+<!--
+    
+    Hint is not related to impress.js in any way.
+    
+    But it can show you how to use impress.js features in creative way.
+    
+    When the presentation step is shown (selected) its element gets the class of "active" and the body element
+    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
+    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
+    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
+    
+    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
+    the first step of presentation is visible for a couple of seconds.
+    
+    ...
+    
+    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
+    It's just a quick and dirty workaround to get different hint text for touch devices.
+    In a real world it should be at least placed in separate JS file ... and the touch content should be
+    probably just hidden somewhere in HTML - not hard-coded in the script.
+    
+    Just sayin' ;)
+    
+-->
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<!--
+    
+    Last, but not least.
+    
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+    
+    In here I just include full source of the script to make it more readable.
+    
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because it should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+    
+-->
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>
+
+<!--
+    
+    Now you know more or less everything you need to build your first impress.js presentation, but before
+    you start...
+    
+    Oh, you've already cloned the code from GitHub?
+    
+    You have it open in text editor?
+    
+    Stop right there!
+    
+    That's not how you create awesome presentations. This is only a code. Implementation of the idea that
+    first needs to grow in your mind.
+    
+    So if you want to build great presentation take a pencil and piece of paper. And turn off the computer.
+    
+    Sketch, draw and write. Brainstorm your ideas on a paper. Try to build a mind-map of what you'd like
+    to present. It will get you closer and closer to the layout you'll build later with impress.js.
+    
+    Get back to the code only when you have your presentation ready on a paper. It doesn't make sense to do
+    it earlier, because you'll only waste your time fighting with positioning of useless points.
+    
+    If you think I'm crazy, please put your hands on a book called "Presentation Zen". It's all about 
+    creating awesome and engaging presentations.
+    
+    Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
+    
+-->
+
+<!--
+    
+    Are you still reading this?
+    
+    For real?
+    
+    I'm impressed! Feel free to let me know that you got that far (I'm @bartaz on Twitter), 'cause I'd like
+    to congratulate you personally :)
+    
+    But you don't have to do it now. Take my advice and take some time off. Make yourself a cup of coffee, tea,
+    or anything you like to drink. And raise a glass for me ;)
+    
+    Cheers!
+    
+-->
+
